@@ -1,0 +1,212 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    padding: 20px;
+
+background: linear-gradient(135deg, #f6d365, #fda085);
+
+    font-family: Arial;
+
+    animation: backgroundMove 5s infinite alternate;
+}
+
+@keyframes backgroundMove
+{
+    from
+    {
+        background-position: left;
+    }
+
+    to
+    {
+        background-position: right;
+    }
+}
+
+.calculator
+{
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    padding: 25px;
+
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.4);
+
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+
+    animation: popup 1s ease;
+}
+
+@keyframes popup
+{
+    from
+    {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#display
+{
+    width: 100%;
+    height: 60px;
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    text-align: right;
+
+    padding-right: 10px;
+
+    background-color: white;
+}
+
+.buttons
+{
+    display: grid;
+
+    grid-template-columns: repeat(4, 75px);
+
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+
+    gap: 12px;
+
+}
+      .dark
+{
+    background: linear-gradient(135deg, #232526, #414345);
+}
+
+.dark .calculator
+{
+    background: rgba(0,0,0,0.3);
+}
+
+.dark button
+{
+    background-color: #444;
+    color: white;
+}
+
+.dark #display
+{
+    background-color: #222;
+    color: white;
+}
+
+
+
+
+
+button
+{
+    height: 65px;
+
+    font-size: 22px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    background-color: white;
+}
+
+button:hover
+{
+    transform: scale(1.1);
+
+    background-color: #ffcc70;
+}
+
+button:active
+{
+    transform: scale(0.95);
+}
+
+.equal
+{
+    grid-column: span 2;
+
+    background-color: orange;
+
+    color: white;
+}
+
+.theme-btn
+{
+    width: 100%;
+    margin-bottom: 15px;
+
+    background-color: #ffc98f;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+.history
+{
+    margin-top: 20px;
+
+    background: rgba(255,255,255,0.2);
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+height: 150px;
+    overflow-y: auto;
+}
+
+.history h3
+{
+    margin-bottom: 10px;
+
+    color: white;
+
+    text-align: center;
+}
+
+.history ul
+{
+    list-style: none;
+
+    padding: 0;
+}
+
+.history li
+{
+    margin-bottom: 8px;
+
+    background-color: rgba(255,255,255,0.3);
+
+    padding: 8px;
+
+    border-radius: 8px;
+
+    color: white;
+}
